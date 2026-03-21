@@ -11,9 +11,12 @@ ls      # list files
 cd      # change directory
 clear   # clear screen
 
+```
+
 ## File paths
 Absolute: /home/user/file
 Relative: ./file
 Important concept
 
-## Everything in Linux is a file.
+## 🧠 Important concept
+> Everything in Linux is a file.
