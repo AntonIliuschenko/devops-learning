@@ -7,9 +7,10 @@ Shell is a command-line interface to interact with the Linux system.
 
 ```bash
 pwd     # current directory
-ls      # list files
-cd      # change directory
+ls      # list files. Arguments -l list, -la allfiles(hidden)
+cd      # change directory. Arguments .. level up, ~/ home folder, / root folder
 clear   # clear screen
+history # previous commands
 
 ```
 

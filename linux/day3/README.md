@@ -2,21 +2,8 @@
 # 📄 Day 3 — Search and text processing
 
 ```markdown
-# Day 3 — Search and text processing
 
-## grep
-
-Search text inside files:
-
-```bash
-grep "error" file.log
-grep -i "error" file.log
-grep -r "error" /var/log
-```
-
-# Day 3 — Search and Text Processing
-
-## grep — search text in files
+grep — search text in files
 
 `grep` is used to search for text patterns inside files or output.
 
@@ -91,7 +78,19 @@ grep "." file.log          # any character
 ```
 
 ---
+## Find
 
+Search files:
+
+find / -name file.txt
+find /var -type f
+
+
+## Pipes
+cat file.log | grep error
+
+
+---
 ## wc — count
 
 ```bash
