@@ -23,13 +23,13 @@
 ## File operations
 
 ```bash
-touch file.txt
-mkdir dir
-cp file1 file2
-mv file1 file2
-rm file.txt
-rm -r dir
+touch file.txt # create file
+mkdir dir      # make new directory
+cp file1 file2 # copy files(directories)
+mv file1 file2 # move files(directories) / rename file or directory
+rm file.txt    # delete file
+rm -r dir      # delete directory use -r means recursive
 
 # Important
 
-Be careful with rm -rf (can delete everything).
+Be careful with rm -rf (can delete everything). system will work until reboot
