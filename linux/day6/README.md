@@ -19,7 +19,10 @@ htop
 ```
 
 # Find process
-- ps aux | grep nginx
+- ps aux | grep nginx # ps-processes command, a- all processes, u-user friendly(easy to read),
+  		      #  x- show processes that do NOT have a controlling terminal (TTY) 
+- ps aux --sort=-%cpu # sorted by cpu usage
+- ps aux --sort=-%mem # sorted by memory usage
 
 ## Important fields in ps
 - PID — process ID
@@ -39,3 +42,4 @@ Used to check:
 - what is running
 - who consumes CPU
 - which service is broken
+
