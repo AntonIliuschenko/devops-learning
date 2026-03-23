@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if systemctl is-active --quiet docker; then
-	echo "docker is running"
+	echo "Docker is running"
 else
-	echo "docker is down"
+	echo "Docker is down"
 fi
