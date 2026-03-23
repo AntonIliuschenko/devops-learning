@@ -53,6 +53,8 @@ How many arguments: 3
 ```
 
 ---
+## 📄 service_status.sh
+Modified isdockeractive.sh, i changed it using arguments. If start ./service_status.sh nginx it will answer accordinly about status using argument.
 
 ## 🧠 What I learned
 
