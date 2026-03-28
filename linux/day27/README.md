@@ -233,3 +233,50 @@ docker inspect CONTAINER_ID
 * never rely on container filesystem for data
 * always externalize data using volumes
 * containers should be replaceable at any time
+
+## Practice: Mounting a Local Website into an Nginx Docker Container
+
+For practicing and testing how to mount a directory into a Docker container, I created a simple welcome webpage using ChatGPT. I decided to keep this example in my repository inside a folder called `web_site`.
+
+On my local machine, inside my Git project, I created the folder `web_site` and added an `index.html` file with the welcome page code.
+
+### Steps
+
+1. Navigate to the folder containing the website:
+
+```bash
+cd web_site/
+```
+
+2. Run an Nginx container and mount the current directory into it:
+
+```bash
+docker run -d -p 8080:80 -v $PWD:/usr/share/nginx/html nginx
+```
+
+### Explanation
+
+* `$PWD` refers to the current directory on the host machine
+* `/usr/share/nginx/html` is the default directory where Nginx serves static files inside the container
+* The `-v` flag mounts the local folder into the container
+
+### Result
+
+After running the container, I opened the browser and navigated to:
+
+```
+http://127.0.0.1:8080/
+```
+
+Instead of the default Nginx page, I saw my custom welcome page.
+
+### Conclusion
+
+This confirms that the local directory was successfully mounted into the container, and Nginx is serving files directly from the host machine.
+
+This is a simple but powerful way to test changes without rebuilding Docker images.
+
+### Screenshot
+
+Below is the result of the mounted website running in the browser:
+![Screenshot](web_site/screenshot.png)
