@@ -191,3 +191,41 @@ container
 * use minimal base images
 * avoid unnecessary packages
 * each instruction creates a layer
+
+
+🧪 Labs
+🔹 Lab 1 — Custom Nginx Image
+
+Built a custom Docker image based on nginx.
+
+Steps:
+
+created custom index.html # Added new *.html file in folder
+used Dockerfile with COPY
+built image
+ran container
+
+Result:
+
+custom web page served via Docker
+accessible on localhost:8080
+![Screenshot](screenshot.png)
+
+🔹 Lab 2 — Ubuntu Image with curl
+
+Built custom image based on ubuntu.
+
+Steps:
+
+used RUN apt update
+installed curl
+created custom image
+
+Result:
+
+container includes curl
+verified with:
+curl google.com
+
+
+![Screenshot](screenshot.png)
