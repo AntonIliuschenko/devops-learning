@@ -1,6 +1,6 @@
-##🧪 ЗАДАЧА 1
+#🧪 ЗАДАЧА 1
 
-#**Собери образ:**
+##Собери образ:
 
 базовый: nginx
 положить свой index.html
@@ -12,11 +12,11 @@ docker run -p 8080:80 my-nginx
 👉 страница открывалась в браузере
 
 
-#**Dockerfile**
+#Dockerfile
 FROM nginx:latest  
 COPY index.html /usr/share/nginx/html/index.html   #index.html береться из папки где сейчас находишься
 
-#**Замечания** 
+##Замечания 
  
 👍 Что ты сделал правильно  
 ✔️ 1. Использовал nginx как базу
