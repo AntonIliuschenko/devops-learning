@@ -1,6 +1,6 @@
-🧪 ЗАДАЧА 1
+##🧪 ЗАДАЧА 1
 
-**Собери образ:**
+#**Собери образ:**
 
 базовый: nginx
 положить свой index.html
@@ -12,12 +12,13 @@ docker run -p 8080:80 my-nginx
 👉 страница открывалась в браузере
 
 
-**Dockerfile**
-FROM nginx:latest
-COPY index.html /usr/share/nginx/html/index.html #index.html береться из папки где сейчас находишься
+#**Dockerfile**
+FROM nginx:latest  
+COPY index.html /usr/share/nginx/html/index.html   #index.html береться из папки где сейчас находишься
 
-**Замечания**
-👍 Что ты сделал правильно
+#**Замечания** 
+ 
+👍 Что ты сделал правильно  
 ✔️ 1. Использовал nginx как базу
 
 👉 отлично, не изобретаешь велосипед
@@ -31,21 +32,23 @@ COPY index.html /usr/share/nginx/html/index.html #index.html береться и
 
 👉 и поэтому nginx запустится сам — красавчик
 
-⚠️ Что можно улучшить (вот тут рост 🚀)
+##⚠️ Что можно улучшить (вот тут рост 🚀)##  
+  
 🔸 1. НЕ используй latest
 
 ❌
 
 FROM nginx:latest
 
-👉 проблема:
+#👉 проблема:
 
 сегодня работает
 завтра обновился образ → всё сломалось
 
 ✅ лучше:
 
-FROM nginx:1.25
+FROM nginx:1.25  
+
 🔸 2. Можно писать проще
 
 ❌
@@ -60,19 +63,20 @@ COPY index.html /usr/share/nginx/html/
 
 🔸 3. (опционально, но красиво)
 
-Добавь метаданные:
+#Добавь метаданные:
 
 LABEL maintainer="you"
 
-**💥 Финальная версия (как у норм DevOps)**
+##**💥 Финальная версия (как у норм DevOps)**
+  
+*FROM nginx:1.25*  
+*COPY index.html /usr/share/nginx/html/*  
 
-*FROM nginx:1.25*
-*COPY index.html /usr/share/nginx/html/*
-
-**🚀 Как проверить**
+#**🚀 Как проверить**  
+  
 docker build -t my-nginx .
 docker run -p 8080:80 my-nginx
 
-👉 открыть:
+#👉 открыть:
 
 http://localhost:8080
