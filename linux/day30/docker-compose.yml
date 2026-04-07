@@ -12,8 +12,7 @@ services:
       - app
 
   app:
-    image: python:3.11-slim
-    command: ["python", "-m", "http.server", "8000"]
+    build: .
     depends_on:
       - db
     environment:
